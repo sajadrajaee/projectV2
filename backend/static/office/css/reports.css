@@ -1,0 +1,746 @@
+
+/* =========================================
+   Reports Page
+   Modern / Responsive / RTL
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Tahoma,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #f3f4f6;
+    color: #252a31;
+
+    min-height: 100vh;
+    direction: rtl;
+}
+
+
+/* =========================================
+   Main Container
+   ========================================= */
+
+.reports-page {
+    width: min(1180px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 36px 0 30px;
+}
+
+
+/* =========================================
+   Page Header
+   ========================================= */
+
+.page-header {
+    margin-bottom: 34px;
+}
+
+.header-content {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    padding: 28px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    box-shadow:
+        0 5px 18px rgba(30, 35, 42, 0.05);
+}
+
+.header-content > div {
+    min-width: 0;
+}
+
+.page-label {
+    display: inline-block;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #68707a;
+
+    margin-bottom: 8px;
+}
+
+.page-header h1 {
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.3;
+
+    color: #20252b;
+
+    margin-bottom: 7px;
+}
+
+.page-header p {
+    color: #737b85;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   Back Button
+   ========================================= */
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 44px;
+    min-width: 0;
+
+    padding: 10px 17px;
+
+    border: 1px solid #d9dde2;
+    border-radius: 10px;
+
+    background: #fafafa;
+
+    color: #353b42;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+
+    /*
+        Important for responsiveness:
+        The button is allowed to shrink and
+        wrap its text instead of overflowing.
+    */
+    max-width: 100%;
+
+    text-align: center;
+    overflow-wrap: anywhere;
+
+    flex-shrink: 1;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.back-button span {
+    font-size: 18px;
+    line-height: 1;
+
+    flex: 0 0 auto;
+}
+
+.back-button:hover {
+    background: #f0f1f3;
+    border-color: #c8cdd3;
+
+    transform: translateY(-1px);
+}
+
+.back-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   Sections
+   ========================================= */
+
+.report-section {
+    margin-bottom: 34px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 16px;
+}
+
+.section-icon {
+    width: 46px;
+    height: 46px;
+
+    flex: 0 0 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #e7e9ec;
+    color: #424951;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: 19px;
+    font-weight: 700;
+
+    color: #272d34;
+
+    margin-bottom: 3px;
+}
+
+.section-heading p {
+    color: #7b838c;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   Office Profile
+   ========================================= */
+
+.profile-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e5e8;
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 15px rgba(30, 35, 42, 0.04);
+}
+
+.profile-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+
+    gap: 20px;
+
+    padding: 17px 22px;
+
+    border-bottom: 1px solid #edf0f2;
+
+    line-height: 1.8;
+}
+
+.profile-row:last-child {
+    border-bottom: none;
+}
+
+.profile-label {
+    color: #7a828b;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.profile-row strong {
+    color: #30363d;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+}
+
+.profile-row-description {
+    align-items: start;
+}
+
+.missing-info {
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+    max-width: 100%;
+
+    padding: 4px 9px;
+
+    border-radius: 6px;
+
+    background: #f4f4f3;
+
+    color: #8a8d91;
+
+    font-size: 12px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   Statistics
+   ========================================= */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+.stat-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e5e8;
+    border-radius: 15px;
+
+    padding: 20px;
+
+    min-width: 0;
+
+    box-shadow:
+        0 4px 15px rgba(30, 35, 42, 0.035);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #d5d9de;
+
+    box-shadow:
+        0 8px 22px rgba(30, 35, 42, 0.07);
+}
+
+.stat-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 17px;
+}
+
+.stat-title {
+    color: #505861;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1.6;
+}
+
+.stat-mark {
+    padding: 4px 8px;
+
+    border-radius: 6px;
+
+    background: #f0f1f2;
+
+    color: #767e87;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.stat-number {
+    display: block;
+
+    color: #252a30;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    direction: ltr;
+    text-align: right;
+
+    margin-bottom: 7px;
+}
+
+.stat-description {
+    display: block;
+
+    color: #858c94;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   Property Status
+   ========================================= */
+
+.status-grid {
+    margin-bottom: 0;
+}
+
+.status-card {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    min-height: 110px;
+}
+
+.status-card .stat-number {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.status-indicator {
+    width: 9px;
+    height: 48px;
+
+    border-radius: 20px;
+
+    flex: 0 0 9px;
+}
+
+.status-indicator.available {
+    background: #687d6d;
+}
+
+.status-indicator.sold {
+    background: #82706c;
+}
+
+.status-indicator.rented {
+    background: #737a83;
+}
+
+
+/* =========================================
+   Contracts
+   ========================================= */
+
+.contract-grid {
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+}
+
+.contract-card {
+    min-height: 145px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+}
+
+.contract-info {
+    min-width: 0;
+}
+
+.contract-info .stat-title {
+    display: block;
+    margin-bottom: 7px;
+}
+
+.contract-card .stat-number {
+    flex: 0 0 auto;
+
+    font-size: 34px;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   Footer
+   ========================================= */
+
+.reports-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 20px 4px 5px;
+
+    color: #858c94;
+
+    font-size: 11px;
+
+    border-top: 1px solid #dfe2e5;
+}
+
+
+/* =========================================
+   Tablet
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    .reports-page {
+        width: min(100% - 24px, 700px);
+        padding-top: 24px;
+    }
+
+    .header-content {
+        align-items: stretch;
+        flex-direction: column;
+
+        padding: 24px;
+    }
+
+    /*
+        Full-width button on tablet/mobile.
+        This gives it a much larger touch area
+        and prevents horizontal squeezing.
+    */
+    .back-button {
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .stats-grid,
+    .contract-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .profile-row {
+        grid-template-columns: 140px 1fr;
+    }
+}
+
+
+/* =========================================
+   Mobile
+   ========================================= */
+
+@media (max-width: 560px) {
+
+    .reports-page {
+        width: calc(100% - 20px);
+
+        padding-top: 15px;
+        padding-bottom: 20px;
+    }
+
+    .page-header {
+        margin-bottom: 25px;
+    }
+
+    .header-content {
+        padding: 20px 16px;
+
+        border-radius: 14px;
+
+        gap: 18px;
+    }
+
+    .page-header h1 {
+        font-size: 27px;
+    }
+
+    .page-header p {
+        font-size: 12px;
+    }
+
+    /*
+        More comfortable mobile button:
+        - no fixed height
+        - enough vertical padding
+        - text can wrap
+        - remains easy to tap
+    */
+    .back-button {
+        min-height: 46px;
+
+        width: 100%;
+
+        padding: 11px 14px;
+
+        border-radius: 9px;
+
+        font-size: 13px;
+        line-height: 1.7;
+
+        white-space: normal;
+
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .back-button span {
+        font-size: 17px;
+    }
+
+    .section-heading {
+        gap: 11px;
+    }
+
+    .section-icon {
+        width: 40px;
+        height: 40px;
+
+        flex-basis: 40px;
+
+        border-radius: 10px;
+
+        font-size: 10px;
+    }
+
+    .section-heading h2 {
+        font-size: 17px;
+    }
+
+    .section-heading p {
+        font-size: 11px;
+    }
+
+    .report-section {
+        margin-bottom: 27px;
+    }
+
+    .profile-row {
+        display: block;
+
+        padding: 15px 17px;
+    }
+
+    .profile-label {
+        display: block;
+
+        margin-bottom: 4px;
+    }
+
+    .profile-row strong,
+    .missing-info {
+        font-size: 13px;
+    }
+
+    .stats-grid,
+    .contract-grid {
+        grid-template-columns: 1fr;
+
+        gap: 11px;
+    }
+
+    .stat-card {
+        padding: 18px;
+
+        border-radius: 13px;
+    }
+
+    .stat-number {
+        font-size: 29px;
+    }
+
+    .contract-card {
+        min-height: 125px;
+    }
+
+    .contract-card .stat-number {
+        font-size: 30px;
+    }
+
+    .reports-footer {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding-top: 17px;
+
+        line-height: 1.8;
+    }
+}
+
+
+/* =========================================
+   Very Small Screens
+   ========================================= */
+
+@media (max-width: 360px) {
+
+    .reports-page {
+        width: calc(100% - 16px);
+    }
+
+    .header-content {
+        padding: 18px 13px;
+
+        gap: 16px;
+    }
+
+    .back-button {
+        min-height: 44px;
+
+        padding: 10px 11px;
+
+        font-size: 12px;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+
+    .stat-top {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 7px;
+    }
+
+    .stat-number {
+        font-size: 27px;
+    }
+
+    .contract-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+/* =========================================
+   Ultra Small Screens
+   ========================================= */
+
+@media (max-width: 300px) {
+
+    .reports-page {
+        width: calc(100% - 12px);
+    }
+
+    .header-content {
+        padding: 16px 11px;
+    }
+
+    .back-button {
+        font-size: 11px;
+        padding: 9px 8px;
+    }
+}
+

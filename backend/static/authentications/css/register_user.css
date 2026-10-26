@@ -1,0 +1,481 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    padding: 24px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    direction: rtl;
+
+    background:
+        radial-gradient(
+            circle at 90% 5%,
+            rgba(77, 124, 140, 0.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(49, 95, 112, 0.055),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #eef3f5 0%,
+            #f7f9fa 55%,
+            #edf2f4 100%
+        );
+
+    color: #193641;
+
+    font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.register-page {
+    width: 100%;
+    max-width: 720px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.register-card {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border: 1px solid #dfe7ea;
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 50px rgba(25, 54, 65, 0.085),
+        0 3px 10px rgba(25, 54, 65, 0.035);
+}
+
+.register-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    top: -125px;
+    left: -90px;
+
+    border: 28px solid rgba(77, 124, 140, 0.045);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.register-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -85px;
+    bottom: -105px;
+
+    border: 24px solid rgba(49, 95, 112, 0.035);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.register-header {
+    position: relative;
+    z-index: 1;
+
+    padding: 28px 22px 24px;
+
+    border-bottom: 1px solid #e1e9eb;
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf4f6,
+            #f8fafb
+        );
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #4d7c8c;
+
+    font-size: 9px;
+    font-weight: 900;
+}
+
+.section-label::before {
+    content: "";
+
+    width: 18px;
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: #6b919d;
+}
+
+.register-header h1 {
+    margin-top: 6px;
+
+    color: #193641;
+
+    font-size: 23px;
+    font-weight: 900;
+
+    line-height: 1.5;
+}
+
+.register-header p {
+    max-width: 500px;
+
+    margin-top: 5px;
+
+    color: #75868c;
+
+    font-size: 10px;
+    line-height: 2;
+}
+
+
+/* =========================
+   MESSAGES
+========================= */
+
+.messages-container {
+    position: relative;
+    z-index: 2;
+
+    padding: 16px 22px 0;
+
+    display: grid;
+    gap: 8px;
+}
+
+.message {
+    padding: 10px 12px;
+
+    border: 1px solid #d4e4e7;
+    border-right: 3px solid #5d8997;
+    border-radius: 8px;
+
+    background: #f4f9fa;
+    color: #49636d;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1.9;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.register-form {
+    position: relative;
+    z-index: 1;
+
+    padding: 23px 22px 25px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    color: #405761;
+
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.form-group input {
+    width: 100%;
+    min-height: 46px;
+
+    padding: 9px 12px;
+
+    border: 1px solid #d5e0e3;
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #fbfcfd;
+    color: #294650;
+
+    font-size: 11px;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input:hover {
+    border-color: #c4d2d6;
+}
+
+.form-group input:focus {
+    background: #ffffff;
+
+    border-color: #608896;
+
+    box-shadow:
+        0 0 0 3px rgba(96, 136, 150, 0.12);
+}
+
+.form-group input::placeholder {
+    color: #9aa7ac;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.form-actions {
+    margin-top: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.register-button,
+.back-button {
+    width: 100%;
+    min-height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.register-button {
+    border: 1px solid #315f70;
+
+    background: #315f70;
+    color: #ffffff;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 16px rgba(49, 95, 112, 0.15);
+}
+
+.register-button:hover {
+    background: #284f5e;
+
+    box-shadow:
+        0 8px 20px rgba(49, 95, 112, 0.21);
+
+    transform: translateY(-1px);
+}
+
+.back-button {
+    border: 1px solid #d6e0e3;
+
+    background: #ffffff;
+    color: #587079;
+}
+
+.back-button:hover {
+    border-color: #c3d2d6;
+    background: #f1f5f6;
+    color: #405e68;
+
+    transform: translateY(-1px);
+}
+
+.register-button:focus-visible,
+.back-button:focus-visible,
+.form-group input:focus-visible {
+    outline: 3px solid rgba(49, 95, 112, 0.16);
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 600px) {
+
+    body {
+        padding: 35px 20px;
+    }
+
+    .register-card {
+        border-radius: 20px;
+    }
+
+    .register-header {
+        padding: 34px 34px 29px;
+    }
+
+    .register-header h1 {
+        font-size: 26px;
+    }
+
+    .register-header p {
+        font-size: 11px;
+    }
+
+    .messages-container {
+        padding: 18px 34px 0;
+    }
+
+    .register-form {
+        padding: 30px 34px 34px;
+    }
+
+    .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 14px;
+        row-gap: 18px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group input {
+        min-height: 48px;
+        font-size: 12px;
+    }
+
+    .form-actions {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .register-button,
+    .back-button {
+        width: auto;
+        min-width: 150px;
+        padding: 8px 20px;
+    }
+
+    .back-button {
+        min-width: 155px;
+    }
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 900px) {
+
+    body {
+        padding: 50px 20px;
+    }
+
+    .register-header {
+        padding: 37px 38px 31px;
+    }
+
+    .register-form {
+        padding: 32px 38px 38px;
+    }
+
+    .messages-container {
+        padding-inline: 38px;
+    }
+
+    .register-header h1 {
+        font-size: 28px;
+    }
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before {
+        transition: none !important;
+        animation: none !important;
+    }
+}

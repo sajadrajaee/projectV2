@@ -1,0 +1,543 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    direction: rtl;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f4f7f8;
+    color: #193641;
+    font-family: Tahoma, Arial, sans-serif;
+    line-height: 1.8;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #e0e7ea;
+    box-shadow: 0 3px 18px rgba(25, 54, 65, 0.04);
+}
+
+.header-inner {
+    width: min(1180px, calc(100% - 32px));
+    margin: auto;
+    min-height: 70px;
+    padding: 14px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-right: 12px;
+}
+
+.brand::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 3px;
+    height: 31px;
+    border-radius: 4px;
+    background: #4d7c8c;
+}
+
+.brand strong {
+    color: #183541;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.4;
+}
+
+.brand span {
+    color: #829198;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 39px;
+    padding: 7px 13px;
+    border: 1px solid #dbe4e7;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #4d6973;
+    font-size: 11px;
+    font-weight: 800;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.back-link:hover {
+    background: #edf3f5;
+    border-color: #cbd9dd;
+    transform: translateX(2px);
+}
+
+.back-link:focus-visible {
+    outline: 2px solid #7094a0;
+    outline-offset: 2px;
+}
+
+.back-link span:first-child {
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: min(1180px, calc(100% - 32px));
+    margin: auto;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0 60px;
+    background:
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(80, 126, 141, 0.14),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #edf3f5,
+            #f8fafb
+        );
+    border-bottom: 1px solid #e0e8eb;
+}
+
+.page-header::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: -80px;
+    bottom: -120px;
+    border: 30px solid rgba(77, 124, 140, 0.05);
+    border-radius: 50%;
+}
+
+.page-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 8px;
+    color: #4d7c8c;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.page-kicker::before {
+    content: "";
+    width: 20px;
+    height: 2px;
+    border-radius: 5px;
+    background: #5f8997;
+}
+
+.page-header h1 {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    color: #193641;
+    font-size: clamp(26px, 6vw, 42px);
+    line-height: 1.5;
+    font-weight: 900;
+}
+
+.page-header p {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin-top: 10px;
+    color: #71828a;
+    font-size: 12px;
+    line-height: 2;
+}
+
+
+/* =========================================================
+   AREAS SECTION
+========================================================= */
+
+.areas-section {
+    flex: 1;
+    padding: 35px 0 65px;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+
+/* =========================================================
+   AREA CARD
+========================================================= */
+
+.area-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 76px;
+    padding: 13px 14px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e0e7e9;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(25, 54, 65, 0.045);
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease,
+        background-color 0.22s ease;
+}
+
+.area-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: #4d7c8c;
+    transform: scaleY(0);
+    transform-origin: center;
+    transition: transform 0.22s ease;
+}
+
+.area-card:hover {
+    background: #fbfdfd;
+    border-color: #ccdce0;
+    transform: translateY(-2px);
+    box-shadow: 0 9px 23px rgba(25, 54, 65, 0.08);
+}
+
+.area-card:hover::before {
+    transform: scaleY(1);
+}
+
+.area-card:focus-visible {
+    outline: 2px solid #7197a3;
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   AREA ICON
+========================================================= */
+
+.area-icon {
+    flex: 0 0 43px;
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: #e9f1f3;
+    color: #4b7888;
+    font-size: 15px;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.area-card:hover .area-icon {
+    background: #dfecef;
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   AREA CONTENT
+========================================================= */
+
+.area-content {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.area-label {
+    color: #96a2a6;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.area-content strong {
+    overflow: hidden;
+    color: #294651;
+    font-size: 14px;
+    font-weight: 900;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   AREA ARROW
+========================================================= */
+
+.area-arrow {
+    flex: 0 0 auto;
+    width: 31px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #f1f5f6;
+    color: #5d7881;
+    font-size: 14px;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.area-card:hover .area-arrow {
+    background: #e7eff1;
+    transform: translateX(-3px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-state {
+    padding: 60px 20px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e0e7e9;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(25, 54, 65, 0.04);
+}
+
+.empty-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: #e8f0f2;
+    color: #65828c;
+    font-size: 22px;
+}
+
+.empty-state h2 {
+    color: #304b55;
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.empty-state p {
+    margin-top: 6px;
+    color: #7c8b90;
+    font-size: 12px;
+}
+
+.empty-back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    min-height: 40px;
+    padding: 7px 17px;
+    border-radius: 8px;
+    background: #315f70;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 900;
+    box-shadow: 0 5px 14px rgba(49, 95, 112, 0.15);
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.empty-back-link:hover {
+    background: #284f5e;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    background: #1d3540;
+    color: #ffffff;
+}
+
+.footer-inner {
+    width: min(1180px, calc(100% - 32px));
+    margin: auto;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.footer-inner strong {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.footer-inner span {
+    color: #9fb1b7;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 600px) {
+
+    .page-header {
+        padding: 65px 0 75px;
+    }
+
+    .areas-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .area-card {
+        min-height: 82px;
+    }
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 900px) {
+
+    .header-inner {
+        min-height: 76px;
+    }
+
+    .page-header {
+        padding: 78px 0 90px;
+    }
+
+    .page-header h1 {
+        font-size: 43px;
+    }
+
+    .page-header p {
+        font-size: 13px;
+    }
+
+    .areas-section {
+        padding-top: 42px;
+    }
+
+    .areas-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 17px;
+    }
+
+    .area-card {
+        min-height: 88px;
+        padding: 15px;
+    }
+
+    .area-content strong {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+    .areas-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .area-card {
+        min-height: 92px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}

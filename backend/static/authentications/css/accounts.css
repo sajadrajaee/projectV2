@@ -1,0 +1,317 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+
+body {
+font-family: Tahoma, Arial, sans-serif;
+
+
+background: #f5f6f8;
+color: #1f2937;
+
+min-height: 100vh;
+
+
+}
+
+/* =========================
+Page
+========================= */
+
+.accounts-page {
+width: 100%;
+min-height: 100vh;
+
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+padding: 30px 20px;
+
+
+}
+
+/* =========================
+Card
+========================= */
+
+.accounts-card {
+width: 100%;
+max-width: 500px;
+
+
+background: #ffffff;
+
+border: 1px solid #e5e7eb;
+border-radius: 14px;
+
+overflow: hidden;
+
+box-shadow:
+    0 10px 35px rgba(15, 23, 42, 0.06);
+
+
+}
+
+/* =========================
+Header
+========================= */
+
+.accounts-header {
+padding: 32px 32px 25px;
+
+
+text-align: center;
+
+border-bottom: 1px solid #edf0f3;
+
+
+}
+
+.page-label {
+display: block;
+
+
+margin-bottom: 9px;
+
+color: #2563eb;
+
+font-size: 11px;
+font-weight: 600;
+
+
+}
+
+.accounts-header h1 {
+color: #1f2937;
+
+
+font-size: 19px;
+font-weight: 700;
+
+line-height: 1.9;
+
+margin-bottom: 8px;
+
+
+}
+
+.accounts-header p {
+color: #9ca3af;
+
+
+font-size: 11px;
+
+line-height: 1.8;
+
+
+}
+
+/* =========================
+Account Options
+========================= */
+
+.account-options {
+display: flex;
+flex-direction: column;
+
+
+gap: 10px;
+
+padding: 25px 32px;
+
+
+}
+
+.account-option {
+display: flex;
+flex-direction: column;
+
+
+padding: 17px 18px;
+
+border: 1px solid #dfe3e8;
+border-radius: 8px;
+
+background: #ffffff;
+
+text-decoration: none;
+
+transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+
+}
+
+.account-option:hover {
+border-color: #2563eb;
+
+
+background: #f8faff;
+
+transform: translateY(-2px);
+
+box-shadow:
+    0 5px 16px rgba(37, 99, 235, 0.08);
+
+
+}
+
+.option-title {
+color: #1f2937;
+
+
+font-size: 13px;
+font-weight: 700;
+
+margin-bottom: 5px;
+
+
+}
+
+.option-description {
+color: #9ca3af;
+
+
+font-size: 11px;
+
+line-height: 1.7;
+
+
+}
+
+/* =========================
+Footer
+========================= */
+
+.page-footer {
+padding: 0 32px 28px;
+
+
+text-align: center;
+
+
+}
+
+.back-link {
+display: inline-flex;
+
+
+align-items: center;
+justify-content: center;
+
+min-height: 40px;
+
+padding: 0 22px;
+
+border: 1px solid #d1d5db;
+border-radius: 7px;
+
+background: #ffffff;
+color: #4b5563;
+
+text-decoration: none;
+
+font-size: 11px;
+font-weight: 600;
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+
+}
+
+.back-link:hover {
+background: #f9fafb;
+
+
+border-color: #9ca3af;
+
+transform: translateY(-1px);
+
+
+}
+
+/* =========================
+Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+
+.accounts-page {
+    padding: 20px 14px;
+}
+
+.accounts-header {
+    padding: 27px 20px 22px;
+}
+
+.accounts-header h1 {
+    font-size: 17px;
+}
+
+.account-options {
+    padding: 20px;
+}
+
+.account-option {
+    padding: 16px;
+}
+
+.page-footer {
+    padding: 0 20px 23px;
+}
+
+.back-link {
+    width: 100%;
+}
+
+
+}
+
+/* =========================
+Small Mobile
+========================= */
+
+@media (max-width: 380px) {
+
+
+.accounts-page {
+    padding: 12px 10px;
+}
+
+.accounts-header {
+    padding: 23px 16px 19px;
+}
+
+.accounts-header h1 {
+    font-size: 16px;
+}
+
+.account-options {
+    padding: 16px;
+}
+
+.option-title {
+    font-size: 12px;
+}
+
+.option-description {
+    font-size: 10px;
+}
+
+.page-footer {
+    padding: 0 16px 19px;
+}
+
+
+}

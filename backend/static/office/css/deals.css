@@ -1,0 +1,1100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+
+body {
+font-family: Tahoma, Arial, sans-serif;
+
+
+background: #f5f6f8;
+color: #1f2937;
+
+min-height: 100vh;
+
+
+}
+
+/* =========================
+Page
+========================= */
+
+.deals-page {
+width: min(1100px, calc(100% - 40px));
+
+
+margin: 0 auto;
+
+padding: 30px 0 60px;
+
+
+}
+
+/* =========================
+Messages
+========================= */
+
+.messages {
+margin-bottom: 18px;
+}
+
+.message {
+padding: 13px 16px;
+
+
+background: #ffffff;
+
+border: 1px solid #dbe2ea;
+border-right: 4px solid #2563eb;
+
+border-radius: 8px;
+
+color: #374151;
+
+font-size: 12px;
+
+box-shadow:
+    0 5px 15px rgba(15, 23, 42, 0.04);
+
+
+}
+
+/* =========================
+Header
+========================= */
+
+.page-header {
+display: flex;
+
+
+align-items: center;
+justify-content: space-between;
+
+gap: 25px;
+
+padding: 28px 30px;
+
+margin-bottom: 18px;
+
+background: #1f2937;
+
+border-radius: 12px;
+
+color: #ffffff;
+
+
+}
+
+.page-label {
+display: block;
+
+
+margin-bottom: 7px;
+
+color: #cbd5e1;
+
+font-size: 11px;
+
+
+}
+
+.page-header h1 {
+font-size: 23px;
+font-weight: 700;
+
+
+line-height: 1.7;
+
+margin-bottom: 5px;
+
+
+}
+
+.page-header p {
+color: #cbd5e1;
+
+
+font-size: 11px;
+
+line-height: 1.8;
+
+
+}
+
+.header-actions {
+display: flex;
+
+
+align-items: center;
+
+gap: 9px;
+
+flex-shrink: 0;
+
+
+}
+
+/* =========================
+Buttons
+========================= */
+
+.btn {
+min-height: 41px;
+
+
+display: inline-flex;
+
+align-items: center;
+justify-content: center;
+
+padding: 0 17px;
+
+border-radius: 7px;
+
+text-decoration: none;
+
+font-family: inherit;
+font-size: 11px;
+font-weight: 600;
+
+white-space: nowrap;
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+
+
+}
+
+.btn:hover {
+transform: translateY(-1px);
+}
+
+.btn-primary {
+background: #2563eb;
+color: #ffffff;
+
+
+border: 1px solid #2563eb;
+
+
+}
+
+.btn-primary:hover {
+background: #1d4ed8;
+border-color: #1d4ed8;
+}
+
+.btn-outline {
+background: transparent;
+color: #ffffff;
+
+
+border: 1px solid #6b7280;
+
+
+}
+
+.btn-outline:hover {
+background: #374151;
+border-color: #9ca3af;
+}
+
+/* =========================
+Statistics
+========================= */
+
+.statistics {
+display: grid;
+
+
+grid-template-columns: repeat(3, minmax(0, 1fr));
+
+gap: 13px;
+
+margin-bottom: 18px;
+
+
+}
+
+.stat-card {
+padding: 21px 23px;
+
+
+background: #ffffff;
+
+border: 1px solid #e5e7eb;
+
+border-radius: 10px;
+
+box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.04);
+
+
+}
+
+.stat-label {
+display: block;
+
+
+margin-bottom: 9px;
+
+color: #6b7280;
+
+font-size: 11px;
+font-weight: 600;
+
+
+}
+
+.stat-card strong {
+display: block;
+
+
+color: #1f2937;
+
+font-size: 25px;
+font-weight: 700;
+
+
+}
+
+/* =========================
+Deals Section
+========================= */
+
+.deals-section {
+background: #ffffff;
+
+
+border: 1px solid #e5e7eb;
+
+border-radius: 12px;
+
+overflow: hidden;
+
+box-shadow:
+    0 5px 20px rgba(15, 23, 42, 0.04);
+
+
+}
+
+.section-header {
+padding: 21px 25px;
+
+
+border-bottom: 1px solid #edf0f3;
+
+
+}
+
+.section-header h2 {
+color: #1f2937;
+
+
+font-size: 15px;
+
+margin-bottom: 5px;
+
+
+}
+
+.section-header p {
+color: #9ca3af;
+
+
+font-size: 11px;
+
+
+}
+
+/* =========================
+Deal List
+========================= */
+
+.deals-list {
+display: flex;
+
+
+flex-direction: column;
+
+gap: 12px;
+
+padding: 20px 25px 25px;
+
+
+}
+
+.deal-card {
+border: 1px solid #e1e5ea;
+
+
+border-radius: 9px;
+
+overflow: hidden;
+
+background: #ffffff;
+
+transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+
+}
+
+.deal-card:hover {
+border-color: #cbd5e1;
+
+
+box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.05);
+
+
+}
+
+/* =========================
+Deal Header
+========================= */
+
+.deal-header {
+display: flex;
+
+
+align-items: center;
+justify-content: space-between;
+
+gap: 15px;
+
+padding: 17px 19px;
+
+background: #f8f9fa;
+
+border-bottom: 1px solid #edf0f3;
+
+
+}
+
+.deal-number {
+display: block;
+
+
+margin-bottom: 5px;
+
+color: #9ca3af;
+
+font-size: 10px;
+
+
+}
+
+.deal-header h3 {
+color: #1f2937;
+
+
+font-size: 14px;
+
+font-weight: 700;
+
+
+}
+
+/* =========================
+Status
+========================= */
+
+.status-badge {
+display: inline-flex;
+
+
+align-items: center;
+justify-content: center;
+
+padding: 7px 12px;
+
+border-radius: 5px;
+
+font-size: 10px;
+font-weight: 600;
+
+background: #eef2f7;
+color: #4b5563;
+
+
+}
+
+/* =========================
+Deal Information
+========================= */
+
+.deal-info {
+display: grid;
+
+
+grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+gap: 0;
+
+
+}
+
+.info-item {
+padding: 17px 19px;
+
+
+border-bottom: 1px solid #edf0f3;
+
+
+}
+
+.info-label {
+display: block;
+
+
+margin-bottom: 7px;
+
+color: #9ca3af;
+
+font-size: 10px;
+font-weight: 600;
+
+
+}
+
+.info-item p {
+color: #374151;
+
+
+font-size: 12px;
+
+line-height: 1.8;
+
+word-break: break-word;
+
+
+}
+
+/* =========================
+Deal Footer
+========================= */
+
+.deal-footer {
+display: flex;
+
+
+align-items: center;
+justify-content: space-between;
+
+gap: 15px;
+
+padding: 15px 19px;
+
+
+}
+
+.deal-actions {
+display: flex;
+
+
+gap: 8px;
+
+flex-shrink: 0;
+
+
+}
+
+.action-edit,
+.action-delete {
+display: inline-flex;
+
+
+align-items: center;
+justify-content: center;
+
+min-height: 35px;
+
+padding: 0 14px;
+
+border-radius: 6px;
+
+text-decoration: none;
+
+font-family: inherit;
+
+font-size: 10px;
+font-weight: 600;
+
+
+}
+
+.action-edit {
+background: #eef4ff;
+color: #2563eb;
+
+
+border: 1px solid #dbe7ff;
+
+
+}
+
+.action-edit:hover {
+background: #e0ebff;
+}
+
+.action-delete {
+background: #fff4f4;
+color: #b42318;
+
+
+border: 1px solid #f3d6d6;
+
+
+}
+
+.action-delete:hover {
+background: #ffeaea;
+}
+
+.deal-note {
+color: #9ca3af;
+
+
+font-size: 10px;
+
+line-height: 1.8;
+
+text-align: left;
+
+
+}
+
+/* =========================
+Empty State
+========================= */
+
+.empty-state {
+padding: 60px 25px;
+
+
+text-align: center;
+
+
+}
+
+.empty-state h3 {
+color: #374151;
+
+
+font-size: 14px;
+
+margin-bottom: 8px;
+
+
+}
+
+.empty-state p {
+color: #9ca3af;
+
+
+font-size: 11px;
+
+margin-bottom: 20px;
+
+
+}
+
+/* =========================
+Tablet
+========================= */
+
+@media (max-width: 850px) {
+
+
+.page-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+}
+
+.header-actions {
+    width: 100%;
+}
+
+.header-actions .btn {
+    flex: 1;
+}
+
+.deal-info {
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+}
+
+
+}
+
+/* =========================
+Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+
+.deals-page {
+    width: calc(100% - 24px);
+
+    padding: 16px 0 35px;
+}
+
+.page-header {
+    padding: 22px 19px;
+}
+
+.page-header h1 {
+    font-size: 19px;
+}
+
+.header-actions {
+    flex-direction: column;
+}
+
+.header-actions .btn {
+    width: 100%;
+    flex: none;
+}
+
+.statistics {
+    grid-template-columns: 1fr;
+}
+
+.stat-card {
+    padding: 17px 19px;
+}
+
+.stat-card strong {
+    font-size: 22px;
+}
+
+.section-header {
+    padding: 19px;
+}
+
+.deals-list {
+    padding: 15px;
+}
+
+.deal-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 16px;
+}
+
+.status-badge {
+    width: 100%;
+}
+
+.deal-info {
+    grid-template-columns: 1fr;
+}
+
+.info-item {
+    padding: 15px 16px;
+}
+
+.deal-footer {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    padding: 15px 16px;
+}
+
+.deal-actions {
+    width: 100%;
+}
+
+.action-edit,
+.action-delete {
+    flex: 1;
+}
+
+.deal-note {
+    text-align: right;
+}
+
+
+}
+
+/* =========================
+Small Mobile
+========================= */
+
+@media (max-width: 380px) {
+
+
+.deals-page {
+    width: calc(100% - 16px);
+}
+
+.page-header {
+    padding: 20px 16px;
+}
+
+.page-header h1 {
+    font-size: 17px;
+}
+
+.deals-list {
+    padding: 10px;
+}
+
+.deal-header {
+    padding: 14px;
+}
+
+.info-item {
+    padding: 14px;
+}
+
+.deal-footer {
+    padding: 14px;
+}
+
+
+}
+
+/* =========================================================
+Deal Contract
+Responsive / Mobile-first
+========================================================= */
+
+.contract-item {
+width: 100%;
+}
+
+/* ---------------------------------------------------------
+Contract Box
+--------------------------------------------------------- */
+
+.contract-box {
+width: 100%;
+
+
+margin-top: 8px;
+
+padding: 10px;
+
+background: #f8fafc;
+
+border: 1px solid #e2e8f0;
+border-radius: 12px;
+
+overflow: hidden;
+
+
+}
+
+/* ---------------------------------------------------------
+Contract Preview
+--------------------------------------------------------- */
+
+.contract-preview {
+width: 100%;
+
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+padding: 6px;
+
+background: #ffffff;
+
+border-radius: 9px;
+
+overflow: hidden;
+
+
+}
+
+.contract-preview img {
+display: block;
+
+
+width: 100%;
+max-width: 100%;
+
+height: auto;
+max-height: 520px;
+
+object-fit: contain;
+
+border-radius: 7px;
+
+background: #f1f5f9;
+
+
+}
+
+/* ---------------------------------------------------------
+Contract Actions
+--------------------------------------------------------- */
+
+.contract-actions {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 12px;
+
+
+margin-top: 10px;
+
+
+}
+
+.contract-name {
+min-width: 0;
+
+
+color: #475569;
+
+font-size: 0.78rem;
+font-weight: 700;
+
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+
+
+}
+
+.contract-download {
+flex: 0 0 auto;
+
+
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 7px;
+
+min-height: 38px;
+
+padding: 8px 12px;
+
+color: #2563eb;
+
+background: #eff6ff;
+
+border: 1px solid #dbeafe;
+border-radius: 8px;
+
+font-family: inherit;
+font-size: 0.78rem;
+font-weight: 700;
+
+text-decoration: none;
+
+transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+
+
+}
+
+.contract-download svg {
+width: 17px;
+height: 17px;
+
+
+flex: 0 0 auto;
+
+
+}
+
+.contract-download:hover {
+background: #dbeafe;
+
+
+border-color: #bfdbfe;
+
+
+}
+
+.contract-download:active {
+transform: translateY(1px);
+}
+
+.contract-download:focus-visible {
+outline: 3px solid rgba(37, 99, 235, 0.2);
+
+
+outline-offset: 2px;
+
+
+}
+
+/* ---------------------------------------------------------
+Empty Contract
+--------------------------------------------------------- */
+
+.contract-empty {
+width: 100%;
+
+
+display: flex;
+align-items: flex-start;
+gap: 10px;
+
+margin-top: 8px;
+padding: 12px;
+
+background: #f8fafc;
+
+border: 1px dashed #cbd5e1;
+border-radius: 10px;
+
+
+}
+
+.contract-empty-icon {
+width: 34px;
+height: 34px;
+
+
+flex: 0 0 34px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+color: #64748b;
+
+background: #ffffff;
+
+border: 1px solid #e2e8f0;
+
+border-radius: 8px;
+
+
+}
+
+.contract-empty-icon svg {
+width: 18px;
+height: 18px;
+}
+
+.contract-empty-content {
+min-width: 0;
+}
+
+.contract-empty-content strong {
+display: block;
+
+
+color: #475569;
+
+font-size: 0.8rem;
+font-weight: 700;
+
+
+}
+
+.contract-empty-content p {
+margin: 3px 0 0;
+
+
+color: #94a3b8;
+
+font-size: 0.74rem;
+
+line-height: 1.7;
+
+
+}
+
+/* ---------------------------------------------------------
+Tablet
+--------------------------------------------------------- */
+
+@media (min-width: 600px) {
+
+
+.contract-box {
+    padding: 12px;
+}
+
+
+.contract-preview {
+    padding: 8px;
+}
+
+
+.contract-preview img {
+    max-height: 600px;
+}
+
+
+.contract-actions {
+    margin-top: 12px;
+}
+
+
+.contract-download {
+    min-height: 40px;
+
+    padding: 8px 14px;
+
+    font-size: 0.8rem;
+}
+
+
+}
+
+/* ---------------------------------------------------------
+Desktop
+--------------------------------------------------------- */
+
+@media (min-width: 900px) {
+
+
+.contract-preview img {
+    max-height: 680px;
+}
+
+
+.contract-box {
+    padding: 14px;
+}
+
+
+}
+
+/* ---------------------------------------------------------
+Very Small Screens
+--------------------------------------------------------- */
+
+@media (max-width: 380px) {
+
+
+.contract-actions {
+    align-items: stretch;
+    flex-direction: column;
+}
+
+
+.contract-name {
+    white-space: normal;
+}
+
+
+.contract-download {
+    width: 100%;
+}
+
+
+}

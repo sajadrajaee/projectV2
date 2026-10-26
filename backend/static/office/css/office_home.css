@@ -1,0 +1,1253 @@
+/* =========================================
+Office Dashboard
+Modern / Professional / Responsive / RTL
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+min-height: 100vh;
+
+
+direction: rtl;
+
+font-family:
+    Tahoma,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+background: #f3f4f6;
+color: #292f36;
+
+
+}
+
+/* =========================================
+Main Container
+========================================= */
+
+.dashboard-page {
+width: min(1180px, calc(100% - 32px));
+
+
+margin: 0 auto;
+
+padding: 30px 0;
+
+
+}
+
+/* =========================================
+Header
+========================================= */
+
+.dashboard-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+
+gap: 20px;
+
+padding: 20px 24px;
+
+background: #ffffff;
+
+border: 1px solid #e3e6e9;
+border-radius: 18px;
+
+box-shadow:
+    0 5px 18px rgba(30, 35, 42, 0.05);
+
+margin-bottom: 22px;
+
+
+}
+
+.header-label,
+.section-label {
+display: inline-block;
+
+
+color: #747c85;
+
+font-size: 11px;
+font-weight: 600;
+
+margin-bottom: 5px;
+
+
+}
+
+.dashboard-header h1 {
+color: #242a31;
+
+
+font-size: clamp(24px, 4vw, 34px);
+line-height: 1.3;
+
+
+}
+
+.header-actions {
+display: flex;
+align-items: center;
+
+
+gap: 12px;
+
+flex-shrink: 0;
+
+
+}
+
+/* =========================================
+Profile
+========================================= */
+
+.profile-link {
+width: 46px;
+height: 46px;
+
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+overflow: hidden;
+
+border-radius: 50%;
+
+border: 1px solid #d8dde1;
+
+background: #e7e9eb;
+
+text-decoration: none;
+
+flex: 0 0 46px;
+
+transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+
+
+}
+
+.profile-link:hover {
+transform: translateY(-1px);
+border-color: #afb6bd;
+}
+
+.profile-image {
+width: 100%;
+height: 100%;
+
+
+object-fit: cover;
+
+display: block;
+
+
+}
+
+.profile-placeholder {
+color: #59616a;
+
+
+font-size: 17px;
+font-weight: 700;
+
+
+}
+
+/* =========================================
+Logout Button
+========================================= */
+
+.logout-button {
+min-height: 42px;
+
+
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+padding: 8px 16px;
+
+border: 1px solid #d9dde1;
+border-radius: 9px;
+
+background: #fafafa;
+
+color: #4b535c;
+
+font-size: 13px;
+font-weight: 600;
+
+text-decoration: none;
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+
+}
+
+.logout-button:hover {
+background: #f0f1f2;
+border-color: #c7ccd1;
+
+
+transform: translateY(-1px);
+
+
+}
+
+/* =========================================
+Messages
+========================================= */
+
+.messages-container {
+display: grid;
+gap: 10px;
+
+
+margin-bottom: 20px;
+
+
+}
+
+.message {
+padding: 13px 17px;
+
+
+background: #ffffff;
+
+border-right: 4px solid #7b838c;
+border-radius: 10px;
+
+color: #4f5760;
+
+font-size: 13px;
+line-height: 1.8;
+
+box-shadow:
+    0 4px 12px rgba(30, 35, 42, 0.04);
+
+
+}
+
+/* =========================================
+Dashboard Introduction
+========================================= */
+
+.dashboard-intro {
+display: grid;
+
+
+grid-template-columns:
+    minmax(0, 1fr) auto;
+
+gap: 30px;
+
+align-items: center;
+
+padding: 30px;
+
+background: #ffffff;
+
+border: 1px solid #e3e6e9;
+border-radius: 18px;
+
+box-shadow:
+    0 5px 18px rgba(30, 35, 42, 0.04);
+
+margin-bottom: 34px;
+
+
+}
+
+.intro-content h2 {
+color: #252b32;
+
+
+font-size: clamp(21px, 3vw, 28px);
+
+margin-bottom: 8px;
+
+
+}
+
+.intro-content p {
+max-width: 590px;
+
+
+color: #747c85;
+
+font-size: 13px;
+line-height: 1.9;
+
+
+}
+
+/* =========================================
+Quick Actions
+========================================= */
+
+.quick-actions {
+display: grid;
+
+
+grid-template-columns:
+    repeat(2, minmax(140px, 1fr));
+
+gap: 10px;
+
+width: 340px;
+
+
+}
+
+.primary-action,
+.secondary-action {
+min-height: 46px;
+
+
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+gap: 8px;
+
+padding: 10px 14px;
+
+border-radius: 10px;
+
+text-decoration: none;
+
+text-align: center;
+
+font-size: 13px;
+font-weight: 600;
+
+transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+
+
+}
+
+.primary-action {
+background: #4e5964;
+
+
+color: #ffffff;
+
+border: 1px solid #4e5964;
+
+
+}
+
+.primary-action:hover {
+background: #414b55;
+border-color: #414b55;
+
+
+transform: translateY(-1px);
+
+
+}
+
+.secondary-action {
+background: #fafafa;
+
+
+color: #4f5760;
+
+border: 1px solid #dce0e3;
+
+
+}
+
+.secondary-action:hover {
+background: #f0f1f2;
+border-color: #cbd0d5;
+
+
+transform: translateY(-1px);
+
+
+}
+
+.action-icon {
+width: 20px;
+height: 20px;
+
+
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+border-radius: 50%;
+
+background: rgba(255, 255, 255, 0.16);
+
+font-size: 18px;
+line-height: 1;
+
+
+}
+
+/* =========================================
+Sections
+========================================= */
+
+.filter-section,
+.houses-section {
+margin-bottom: 34px;
+}
+
+.section-heading {
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+
+
+gap: 20px;
+
+margin-bottom: 16px;
+
+
+}
+
+.section-heading h2 {
+color: #292f36;
+
+
+font-size: 20px;
+
+margin-bottom: 4px;
+
+
+}
+
+.section-heading p {
+color: #7b838c;
+
+
+font-size: 12px;
+line-height: 1.8;
+
+
+}
+
+/* =========================================
+List Houses Button
+========================================= */
+
+.list-houses-button {
+min-height: 42px;
+
+
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+padding: 9px 16px;
+
+background: #ffffff;
+
+color: #555e67;
+
+border: 1px solid #dce0e3;
+border-radius: 9px;
+
+text-decoration: none;
+
+font-size: 12px;
+font-weight: 600;
+
+white-space: nowrap;
+
+transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+
+}
+
+.list-houses-button:hover {
+background: #f1f2f3;
+
+
+transform: translateY(-1px);
+
+
+}
+
+/* =========================================
+Filter Form
+========================================= */
+
+.filter-form {
+display: grid;
+
+
+grid-template-columns:
+    repeat(4, minmax(0, 1fr))
+    auto;
+
+gap: 14px;
+
+align-items: end;
+
+padding: 22px;
+
+background: #ffffff;
+
+border: 1px solid #e1e4e7;
+border-radius: 16px;
+
+box-shadow:
+    0 4px 15px rgba(30, 35, 42, 0.035);
+
+
+}
+
+.filter-field {
+min-width: 0;
+}
+
+.filter-field label {
+display: block;
+
+
+color: #5f6871;
+
+font-size: 12px;
+font-weight: 600;
+
+margin-bottom: 7px;
+
+
+}
+
+.filter-field select,
+.filter-field input {
+width: 100%;
+height: 44px;
+
+
+padding: 0 12px;
+
+background: #fcfcfc;
+
+border: 1px solid #dfe3e6;
+border-radius: 9px;
+
+color: #363d45;
+
+outline: none;
+
+font-family: inherit;
+font-size: 13px;
+
+transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+
+
+}
+
+.filter-field input::placeholder {
+color: #a0a6ac;
+}
+
+.filter-field select:focus,
+.filter-field input:focus {
+background: #ffffff;
+
+
+border-color: #8c959d;
+
+box-shadow:
+    0 0 0 3px rgba(100, 110, 120, 0.08);
+
+
+}
+
+.filter-button {
+height: 44px;
+
+
+padding: 0 22px;
+
+border: none;
+border-radius: 9px;
+
+background: #4e5964;
+
+color: #ffffff;
+
+font-family: inherit;
+font-size: 13px;
+font-weight: 600;
+
+cursor: pointer;
+
+transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+
+}
+
+.filter-button:hover {
+background: #414b55;
+
+
+transform: translateY(-1px);
+
+
+}
+
+/* =========================================
+Houses Grid
+========================================= */
+
+.houses-grid {
+display: grid;
+
+
+grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+gap: 16px;
+
+
+}
+
+.house-card {
+min-width: 0;
+
+
+display: flex;
+flex-direction: column;
+
+padding: 20px;
+
+background: #ffffff;
+
+border: 1px solid #e1e4e7;
+border-radius: 16px;
+
+box-shadow:
+    0 4px 15px rgba(30, 35, 42, 0.035);
+
+transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+
+
+}
+
+.house-card:hover {
+transform: translateY(-3px);
+
+
+border-color: #d1d6da;
+
+box-shadow:
+    0 10px 25px rgba(30, 35, 42, 0.07);
+
+
+}
+
+.house-card-header {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+
+
+gap: 10px;
+
+margin-bottom: 16px;
+
+
+}
+
+.location-info {
+min-width: 0;
+}
+
+.location-label {
+display: block;
+
+
+color: #8a9198;
+
+font-size: 10px;
+
+margin-bottom: 5px;
+
+
+}
+
+.location-info h3 {
+color: #30363d;
+
+
+font-size: 14px;
+line-height: 1.7;
+
+overflow-wrap: anywhere;
+
+
+}
+
+.separator {
+color: #b0b5ba;
+
+
+padding: 0 3px;
+
+
+}
+
+.listing-badge {
+flex: 0 0 auto;
+
+
+padding: 5px 9px;
+
+background: #f0f1f2;
+
+border-radius: 7px;
+
+color: #606972;
+
+font-size: 10px;
+font-weight: 600;
+
+
+}
+
+.house-area {
+padding-bottom: 15px;
+margin-bottom: 15px;
+
+
+border-bottom: 1px solid #edf0f2;
+
+color: #59616a;
+
+font-size: 13px;
+font-weight: 600;
+
+overflow-wrap: anywhere;
+
+
+}
+
+/* =========================================
+House Details
+========================================= */
+
+.house-details {
+display: grid;
+
+
+grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+gap: 10px;
+
+margin-bottom: 18px;
+
+
+}
+
+.detail-item {
+min-width: 0;
+
+
+padding: 10px;
+
+background: #f8f9fa;
+
+border-radius: 9px;
+
+
+}
+
+.detail-item span {
+display: block;
+
+
+color: #899099;
+
+font-size: 10px;
+
+margin-bottom: 4px;
+
+
+}
+
+.detail-item strong {
+display: block;
+
+
+color: #3c444c;
+
+font-size: 12px;
+
+overflow-wrap: anywhere;
+
+
+}
+
+/* =========================================
+House Actions
+========================================= */
+
+.house-actions {
+display: grid;
+
+
+grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+gap: 7px;
+
+margin-top: auto;
+
+
+}
+
+.house-button {
+min-height: 38px;
+
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+padding: 7px 5px;
+
+border-radius: 8px;
+
+text-decoration: none;
+
+text-align: center;
+
+font-size: 11px;
+font-weight: 600;
+
+transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+
+}
+
+.house-button:hover {
+transform: translateY(-1px);
+}
+
+.view-button {
+background: #4e5964;
+color: #ffffff;
+}
+
+.view-button:hover {
+background: #414b55;
+}
+
+.edit-button {
+background: #f1f2f3;
+color: #56606a;
+
+
+border: 1px solid #e0e3e6;
+
+
+}
+
+.edit-button:hover {
+background: #e9ebed;
+}
+
+.delete-button {
+background: #f5f2f1;
+color: #786360;
+
+
+border: 1px solid #e9dfdd;
+
+
+}
+
+.delete-button:hover {
+background: #eee8e6;
+}
+
+/* =========================================
+Empty State
+========================================= */
+
+.empty-state {
+padding: 50px 25px;
+
+
+text-align: center;
+
+background: #ffffff;
+
+border: 1px solid #e1e4e7;
+border-radius: 16px;
+
+box-shadow:
+    0 4px 15px rgba(30, 35, 42, 0.035);
+
+
+}
+
+.empty-icon {
+width: 64px;
+height: 64px;
+
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+margin: 0 auto 17px;
+
+background: #eceef0;
+
+color: #68717a;
+
+border-radius: 16px;
+
+font-size: 12px;
+font-weight: 700;
+
+
+}
+
+.empty-state h3 {
+color: #363d45;
+
+
+font-size: 18px;
+
+margin-bottom: 8px;
+
+
+}
+
+.empty-state p {
+color: #818890;
+
+
+font-size: 13px;
+line-height: 1.8;
+
+margin-bottom: 20px;
+
+
+}
+
+.empty-action {
+width: fit-content;
+
+
+margin: 0 auto;
+
+
+}
+
+/* =========================================
+Footer
+========================================= */
+
+.dashboard-footer {
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+
+gap: 15px;
+
+padding: 20px 5px 4px;
+
+border-top: 1px solid #dfe3e6;
+
+color: #899099;
+
+font-size: 11px;
+
+
+}
+
+/* =========================================
+Large Tablet
+========================================= */
+
+@media (max-width: 1050px) {
+
+
+.dashboard-intro {
+    grid-template-columns: 1fr;
+}
+
+.quick-actions {
+    width: 100%;
+}
+
+.filter-form {
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+}
+
+.filter-button {
+    width: 100%;
+}
+
+.houses-grid {
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+}
+
+
+}
+
+/* =========================================
+Tablet
+========================================= */
+
+@media (max-width: 700px) {
+
+
+.dashboard-page {
+    width: calc(100% - 24px);
+
+    padding-top: 20px;
+}
+
+.dashboard-header {
+    padding: 18px;
+
+    border-radius: 15px;
+}
+
+.filter-section,
+.houses-section {
+    margin-bottom: 28px;
+}
+
+.section-heading {
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.list-houses-button {
+    width: 100%;
+}
+
+.houses-grid {
+    grid-template-columns: 1fr;
+}
+
+
+}
+
+/* =========================================
+Mobile
+========================================= */
+
+@media (max-width: 560px) {
+
+
+.dashboard-page {
+    width: calc(100% - 20px);
+
+    padding-top: 14px;
+    padding-bottom: 20px;
+}
+
+.dashboard-header {
+    padding: 16px;
+
+    gap: 14px;
+}
+
+.dashboard-header h1 {
+    font-size: 23px;
+}
+
+.header-label {
+    font-size: 10px;
+}
+
+.header-actions {
+    gap: 8px;
+}
+
+.profile-link {
+    width: 42px;
+    height: 42px;
+
+    flex-basis: 42px;
+}
+
+.logout-button {
+    min-height: 42px;
+
+    padding: 8px 12px;
+
+    font-size: 12px;
+}
+
+.dashboard-intro {
+    padding: 22px 17px;
+
+    gap: 22px;
+
+    border-radius: 15px;
+
+    margin-bottom: 27px;
+}
+
+.intro-content h2 {
+    font-size: 21px;
+}
+
+.intro-content p {
+    font-size: 12px;
+}
+
+.quick-actions {
+    grid-template-columns: 1fr;
+}
+
+.primary-action,
+.secondary-action {
+    width: 100%;
+}
+
+.filter-form {
+    grid-template-columns: 1fr;
+
+    padding: 17px;
+
+    gap: 12px;
+
+    border-radius: 14px;
+}
+
+.filter-button {
+    width: 100%;
+    min-height: 46px;
+}
+
+.section-heading h2 {
+    font-size: 18px;
+}
+
+.section-heading p {
+    font-size: 11px;
+}
+
+.house-card {
+    padding: 17px;
+
+    border-radius: 14px;
+}
+
+.house-card-header {
+    gap: 8px;
+}
+
+.house-details {
+    gap: 8px;
+}
+
+.house-actions {
+    gap: 6px;
+}
+
+.dashboard-footer {
+    flex-direction: column;
+    align-items: flex-start;
+
+    line-height: 1.8;
+}
+
+
+}
+
+/* =========================================
+Small Mobile
+========================================= */
+
+@media (max-width: 380px) {
+
+
+.dashboard-page {
+    width: calc(100% - 16px);
+}
+
+.dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.header-actions {
+    width: 100%;
+}
+
+.profile-link {
+    margin-right: auto;
+}
+
+.logout-button {
+    flex: 1;
+}
+
+.dashboard-intro {
+    padding: 19px 14px;
+}
+
+.house-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.listing-badge {
+    align-self: flex-start;
+}
+
+.house-details {
+    grid-template-columns: 1fr;
+}
+
+.empty-state {
+    padding: 40px 16px;
+}
+
+
+}

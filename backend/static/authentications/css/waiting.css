@@ -1,0 +1,260 @@
+/* authentications/css/waiting.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-dark: #193641;
+    --primary: #315f70;
+    --primary-light: #4d7c8c;
+
+    --background: #f3f6f7;
+    --card: #ffffff;
+    --text: #1f2f35;
+    --muted: #718087;
+
+    --success: #3d7a68;
+    --success-soft: #e8f3ef;
+
+    --border: #e1e8eb;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Tahoma, Arial, sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 10% 15%, rgba(77, 124, 140, 0.12), transparent 28%),
+        radial-gradient(circle at 90% 85%, rgba(49, 95, 112, 0.10), transparent 30%),
+        var(--background);
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.waiting-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.waiting-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 600px;
+
+    padding: 48px 40px;
+
+    text-align: center;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+
+    box-shadow:
+        0 18px 45px rgba(25, 54, 65, 0.08),
+        0 4px 12px rgba(25, 54, 65, 0.04);
+
+    overflow: hidden;
+}
+
+
+/* Decorative top line */
+
+.waiting-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 5px;
+
+    background: linear-gradient(
+        90deg,
+        var(--primary-dark),
+        var(--primary-light)
+    );
+}
+
+
+/* =========================
+   SUCCESS MARK
+========================= */
+
+.status-mark {
+    width: 74px;
+    height: 74px;
+
+    margin: 0 auto 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--success-soft);
+    color: var(--success);
+
+    border: 1px solid rgba(61, 122, 104, 0.16);
+
+    font-size: 34px;
+    font-weight: bold;
+
+    box-shadow: 0 8px 20px rgba(61, 122, 104, 0.08);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    padding: 7px 13px;
+
+    border-radius: 999px;
+
+    background: #edf3f5;
+    color: var(--primary);
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+h1 {
+    margin-bottom: 16px;
+
+    color: var(--primary-dark);
+
+    font-size: 27px;
+    line-height: 1.7;
+    font-weight: 800;
+}
+
+p {
+    max-width: 470px;
+
+    margin: 0 auto;
+
+    color: var(--muted);
+
+    font-size: 15px;
+    line-height: 2;
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    margin-top: 30px;
+    padding: 0 25px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary-dark),
+        var(--primary)
+    );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    box-shadow: 0 8px 18px rgba(49, 95, 112, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 12px 24px rgba(49, 95, 112, 0.24);
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-light)
+    );
+}
+
+.back-button:focus-visible {
+    outline: 3px solid rgba(77, 124, 140, 0.35);
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .waiting-page {
+        padding: 16px;
+    }
+
+    .waiting-card {
+        padding: 40px 24px;
+        border-radius: 18px;
+    }
+
+    .status-mark {
+        width: 66px;
+        height: 66px;
+
+        margin-bottom: 20px;
+
+        font-size: 30px;
+    }
+
+    h1 {
+        font-size: 22px;
+        line-height: 1.8;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    .back-button {
+        width: 100%;
+        margin-top: 26px;
+    }
+}

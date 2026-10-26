@@ -1,0 +1,887 @@
+/* =========================================
+NOTES PAGE
+Clean - Modern - Professional - Responsive
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+direction: rtl;
+
+
+min-height: 100vh;
+
+font-family:
+    Tahoma,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+background: #f3f4f6;
+
+color: #292f36;
+
+
+}
+
+a {
+color: inherit;
+}
+
+/* =========================================
+MAIN PAGE
+========================================= */
+
+.notes-page {
+width: min(1050px, calc(100% - 32px));
+
+
+margin: 0 auto;
+
+padding: 30px 0 28px;
+
+
+}
+
+/* =========================================
+HEADER
+========================================= */
+
+.notes-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+
+gap: 25px;
+
+padding: 27px 29px;
+
+background: #ffffff;
+
+border: 1px solid #e2e5e8;
+
+border-radius: 18px;
+
+box-shadow:
+    0 5px 18px rgba(30, 35, 42, 0.045);
+
+
+}
+
+.header-info {
+min-width: 0;
+}
+
+.page-label,
+.section-label {
+display: block;
+
+
+color: #858c94;
+
+font-size: 11px;
+font-weight: 600;
+
+margin-bottom: 5px;
+
+
+}
+
+.notes-header h1 {
+color: #282e35;
+
+
+font-size: clamp(25px, 4vw, 34px);
+
+line-height: 1.4;
+
+margin-bottom: 6px;
+
+
+}
+
+.notes-header p {
+color: #7c848c;
+
+
+font-size: 13px;
+
+line-height: 1.8;
+
+
+}
+
+/* =========================================
+BACK BUTTON
+========================================= */
+
+.back-button {
+min-height: 44px;
+
+
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+gap: 8px;
+
+padding: 9px 16px;
+
+background: #fafafa;
+
+border: 1px solid #dfe3e6;
+
+border-radius: 10px;
+
+color: #444c54;
+
+text-decoration: none;
+
+font-size: 13px;
+font-weight: 600;
+
+white-space: nowrap;
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+
+}
+
+.back-button span {
+font-size: 17px;
+
+
+line-height: 1;
+
+
+}
+
+.back-button:hover {
+background: #f0f1f2;
+
+
+border-color: #cdd2d6;
+
+transform: translateY(-1px);
+
+
+}
+
+.back-button:active {
+transform: translateY(0);
+}
+
+/* =========================================
+NOTES LIST
+========================================= */
+
+.notes-list {
+margin-top: 25px;
+}
+
+.notes-list-header {
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+
+
+gap: 20px;
+
+margin-bottom: 16px;
+
+
+}
+
+.notes-list-header h2 {
+color: #30363d;
+
+
+font-size: 20px;
+
+line-height: 1.5;
+
+
+}
+
+/* =========================================
+CREATE BUTTON
+========================================= */
+
+.create-note-button {
+min-height: 43px;
+
+
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+gap: 8px;
+
+padding: 0 16px;
+
+border: 1px solid #d0d5d9;
+
+border-radius: 9px;
+
+background: #e5e8ea;
+
+color: #3e464e;
+
+text-decoration: none;
+
+font-size: 12px;
+font-weight: 700;
+
+white-space: nowrap;
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+
+}
+
+.create-note-button span {
+font-size: 19px;
+
+
+font-weight: 400;
+
+line-height: 1;
+
+
+}
+
+.create-note-button:hover {
+background: #dadddf;
+
+
+border-color: #c5cacf;
+
+transform: translateY(-1px);
+
+
+}
+
+.create-note-button:active {
+transform: translateY(0);
+}
+
+/* =========================================
+NOTES GRID
+========================================= */
+
+.notes-grid {
+display: grid;
+
+
+grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+gap: 15px;
+
+
+}
+
+/* =========================================
+NOTE CARD
+========================================= */
+
+.note-card {
+min-width: 0;
+
+
+display: flex;
+flex-direction: column;
+
+background: #ffffff;
+
+border: 1px solid #e1e4e7;
+
+border-radius: 15px;
+
+overflow: hidden;
+
+box-shadow:
+    0 4px 15px rgba(30, 35, 42, 0.035);
+
+transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+
+
+}
+
+.note-card:hover {
+transform: translateY(-2px);
+
+
+border-color: #d0d5d9;
+
+box-shadow:
+    0 9px 23px rgba(30, 35, 42, 0.065);
+
+
+}
+
+/* =========================================
+NOTE TOP
+========================================= */
+
+.note-card-top {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+
+
+gap: 15px;
+
+padding: 19px 19px 15px;
+
+border-bottom: 1px solid #edf0f2;
+
+
+}
+
+.note-title-area {
+min-width: 0;
+
+
+display: flex;
+align-items: center;
+
+gap: 10px;
+
+
+}
+
+.note-number {
+width: 30px;
+height: 30px;
+
+
+flex: 0 0 30px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+border-radius: 8px;
+
+background: #e9ebed;
+
+color: #626a72;
+
+font-size: 10px;
+font-weight: 700;
+
+
+}
+
+.note-title-area h3 {
+color: #333a42;
+
+
+font-size: 16px;
+font-weight: 700;
+
+line-height: 1.6;
+
+overflow-wrap: anywhere;
+
+
+}
+
+.note-date {
+flex: 0 0 auto;
+
+
+max-width: 45%;
+
+color: #949aa0;
+
+font-size: 9px;
+
+line-height: 1.6;
+
+text-align: left;
+
+direction: rtl;
+
+overflow-wrap: anywhere;
+
+
+}
+
+/* =========================================
+NOTE CONTENT
+========================================= */
+
+.note-content {
+flex: 1;
+
+
+padding: 18px 19px;
+
+color: #626a72;
+
+font-size: 13px;
+
+line-height: 2.1;
+
+white-space: pre-line;
+
+overflow-wrap: anywhere;
+
+min-height: 110px;
+
+
+}
+
+/* =========================================
+NOTE ACTIONS
+========================================= */
+
+.note-actions {
+display: grid;
+
+
+grid-template-columns:
+    1fr 1fr;
+
+gap: 8px;
+
+padding: 12px;
+
+background: #fafafa;
+
+border-top: 1px solid #edf0f2;
+
+
+}
+
+.note-action {
+min-height: 38px;
+
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+border: 1px solid #dfe3e6;
+
+border-radius: 8px;
+
+text-decoration: none;
+
+font-size: 11px;
+font-weight: 600;
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+
+
+}
+
+.edit-note {
+background: #f4f5f5;
+
+
+color: #515961;
+
+
+}
+
+.delete-note {
+background: #faf8f8;
+
+
+color: #705e5e;
+
+
+}
+
+.note-action:hover {
+background: #ebedef;
+
+
+border-color: #cdd2d6;
+
+
+}
+
+/* =========================================
+EMPTY STATE
+========================================= */
+
+.empty-notes {
+margin-top: 25px;
+
+
+padding: 60px 25px;
+
+background: #ffffff;
+
+border: 1px dashed #d5dade;
+
+border-radius: 18px;
+
+text-align: center;
+
+box-shadow:
+    0 4px 15px rgba(30, 35, 42, 0.025);
+
+
+}
+
+.empty-icon {
+width: 60px;
+height: 60px;
+
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+margin: 0 auto 18px;
+
+border-radius: 16px;
+
+background: #e8eaec;
+
+color: #626a72;
+
+font-size: 10px;
+font-weight: 700;
+
+
+}
+
+.empty-notes h2 {
+color: #353c44;
+
+
+font-size: 20px;
+
+margin-bottom: 8px;
+
+
+}
+
+.empty-notes p {
+max-width: 450px;
+
+
+margin: 0 auto 22px;
+
+color: #858c94;
+
+font-size: 12px;
+
+line-height: 2;
+
+
+}
+
+.empty-create {
+display: inline-flex;
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+.notes-footer {
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+
+gap: 15px;
+
+margin-top: 30px;
+
+padding: 18px 4px 5px;
+
+border-top: 1px solid #dde1e4;
+
+color: #8b9299;
+
+font-size: 10px;
+
+
+}
+
+.notes-footer a {
+color: #69727a;
+
+
+text-decoration: none;
+
+font-weight: 600;
+
+
+}
+
+.notes-footer a:hover {
+text-decoration: underline;
+}
+
+/* =========================================
+TABLET
+========================================= */
+
+@media (max-width: 750px) {
+
+
+.notes-page {
+    width: min(100% - 24px, 650px);
+
+    padding-top: 20px;
+}
+
+
+.notes-header {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    padding: 22px;
+}
+
+
+.back-button {
+    width: 100%;
+}
+
+
+.notes-list-header {
+    align-items: stretch;
+
+    flex-direction: column;
+}
+
+
+.create-note-button {
+    width: 100%;
+}
+
+
+.notes-grid {
+    grid-template-columns: 1fr;
+}
+
+
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media (max-width: 560px) {
+
+
+.notes-page {
+    width: calc(100% - 18px);
+
+    padding-top: 12px;
+    padding-bottom: 20px;
+}
+
+
+.notes-header {
+    padding: 19px 15px;
+
+    border-radius: 14px;
+
+    gap: 17px;
+}
+
+
+.notes-header h1 {
+    font-size: 25px;
+}
+
+
+.notes-header p {
+    font-size: 11px;
+}
+
+
+.back-button {
+    min-height: 46px;
+
+    font-size: 13px;
+}
+
+
+.notes-list {
+    margin-top: 20px;
+}
+
+
+.notes-list-header {
+    margin-bottom: 13px;
+}
+
+
+.notes-list-header h2 {
+    font-size: 18px;
+}
+
+
+.notes-grid {
+    gap: 11px;
+}
+
+
+.note-card {
+    border-radius: 13px;
+}
+
+
+.note-card-top {
+    padding: 16px 15px 13px;
+
+    gap: 10px;
+}
+
+
+.note-title-area {
+    gap: 8px;
+}
+
+
+.note-number {
+    width: 27px;
+    height: 27px;
+
+    flex-basis: 27px;
+}
+
+
+.note-title-area h3 {
+    font-size: 14px;
+}
+
+
+.note-date {
+    max-width: 40%;
+
+    font-size: 8px;
+}
+
+
+.note-content {
+    padding: 16px 15px;
+
+    min-height: 95px;
+
+    font-size: 12px;
+
+    line-height: 2;
+}
+
+
+.note-actions {
+    padding: 10px;
+
+    gap: 6px;
+}
+
+
+.note-action {
+    min-height: 41px;
+
+    font-size: 11px;
+}
+
+
+.empty-notes {
+    margin-top: 20px;
+
+    padding: 45px 17px;
+
+    border-radius: 14px;
+}
+
+
+.empty-notes h2 {
+    font-size: 18px;
+}
+
+
+.empty-notes p {
+    font-size: 11px;
+}
+
+
+.notes-footer {
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: 24px;
+
+    line-height: 1.8;
+}
+
+
+}
+
+/* =========================================
+VERY SMALL SCREENS
+========================================= */
+
+@media (max-width: 360px) {
+
+
+.notes-page {
+    width: calc(100% - 14px);
+}
+
+
+.notes-header {
+    padding: 17px 12px;
+}
+
+
+.note-card-top {
+    align-items: stretch;
+
+    flex-direction: column;
+}
+
+
+.note-date {
+    max-width: 100%;
+
+    text-align: right;
+}
+
+
+.note-actions {
+    grid-template-columns: 1fr;
+}
+
+
+.note-action {
+    min-height: 42px;
+}
+
+
+}
