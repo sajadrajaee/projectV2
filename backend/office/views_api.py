@@ -424,6 +424,7 @@ def deal_retrieve_api(request, id):
 @permission_classes([IsAuthenticated, IsOfficeUser])
 def reports_api(request):
 
+
     office = get_object_or_404(Office, admin=request.user)
     deals = OfficeDeal.objects.filter(office=office)
     houses = House.objects.filter(office=office)
@@ -461,3 +462,8 @@ def reports_api(request):
     }
 
     return Response(data)
+
+
+def share(request, id):
+    # share posts on whatsapp
+    pass 
