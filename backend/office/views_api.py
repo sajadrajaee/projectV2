@@ -99,7 +99,7 @@ def update_house_api(request, id):
     if request.method == 'GET':
         serializer = HouseSerializer(house)
         return Response(serializer.data)
-    if request.method in ['PUT', 'PATCH']:
+    elif request.method in ['PUT', 'PATCH']:
         serializer = HouseUpdateSerializer(
             house,
             data=request.data,

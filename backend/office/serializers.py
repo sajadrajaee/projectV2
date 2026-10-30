@@ -1,6 +1,34 @@
 from .models import House, Office, Note, HouseFile, OfficeDeal
 from rest_framework import serializers
 from django.db import transaction
+from .validators import validate_house_file
+from django.core.exceptions import ValidationError as DjangoValidationError
+
+from django.http import QueryDict
+
+
+def make_mutable_data(data):
+    if isinstance(data, QueryDict):
+        mutable_data = QueryDict('', mutable=True)
+
+        for key in data:
+            mutable_data.setlist(key, data.getlist(key))
+
+        return mutable_data
+
+    return data.copy()
+
+class HouseFileValidationMixin:
+
+    def validate_files(self, files):
+        for file in files:
+            try:
+                validate_house_file(file)
+            except DjangoValidationError as e:
+                raise serializers.ValidationError(e.messages)
+
+        return files
+
 
 class HouseFileSerializer(serializers.ModelSerializer):
     class Meta:
@@ -77,7 +105,7 @@ class HouseSerializer(serializers.ModelSerializer):
         )
 
 
-class HouseCreateSerializer(serializers.ModelSerializer):
+class HouseCreateSerializer(HouseFileValidationMixin, serializers.ModelSerializer):
     files = serializers.ListField(
         child=serializers.FileField(),
         required=False,
@@ -87,13 +115,18 @@ class HouseCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = House
         exclude = ['office']
+    def validate_files(self, files):
+        for file in files:
+            try:
+                validate_house_file(file)
+            except DjangoValidationError as e:
+                raise serializers.ValidationError(e.messages)
 
+        return files
     def to_internal_value(self, data):
-        # Copy request data so we don't modify the original QueryDict
-        data = data.copy()
+        data = make_mutable_data(data)
 
         # Remove empty file values sent by the frontend
-        # frontend must send empty array if there was no file attached.
         if data.get('files') == '':
             data.pop('files', None)
 
@@ -111,11 +144,12 @@ class HouseCreateSerializer(serializers.ModelSerializer):
 
         return house
 
-class HouseUpdateSerializer(serializers.ModelSerializer):
+class HouseUpdateSerializer(HouseFileValidationMixin, serializers.ModelSerializer):
     files = serializers.ListField(
         child=serializers.FileField(),
         required=False,
         write_only=True,
+        max_length=9,
     )
 
     delete_file_ids = serializers.ListField(
@@ -129,9 +163,9 @@ class HouseUpdateSerializer(serializers.ModelSerializer):
         exclude = ['office']
 
     def to_internal_value(self, data):
-        data = data.copy()
+        data = make_mutable_data(data)
 
-        # Ignore empty file values sent by the frontend
+        # Remove empty file values sent by the frontend
         if data.get('files') == '':
             data.pop('files', None)
 

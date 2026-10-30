@@ -154,6 +154,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]   
 
+# Files larger than this are streamed to disk instead of memory.
+FILE_UPLOAD_MAX_MEMORY_SIZE = 5 * 1024 * 1024
+
+# Maximum number of files in one request.
+DATA_UPLOAD_MAX_NUMBER_FILES = 10
+
 # EMAIL_BACKEND = config(
 #     "EMAIL_BACKEND",
 #     default="django.core.mail.backends.console.EmailBackend" if DEBUG else "django.core.mail.backends.smtp.EmailBackend",

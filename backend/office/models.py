@@ -2,7 +2,7 @@ from django.db import models
 from authentications.models import User
 import os
 from django.utils.translation import gettext_lazy as _
-
+from .validators import validate_house_file
 
 
 DISTRICTS = [
@@ -171,7 +171,8 @@ class HouseFile(models.Model):
         upload_to="houses/",
         verbose_name="فایل",
         null=True,
-        blank=True
+        blank=True,
+        validators=[validate_house_file]
     )
 
 
