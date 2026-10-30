@@ -114,19 +114,6 @@ export function HomePage() {
         {page.next && <button className="pagination-link" onClick={() => goToPage(page.next)}><ArrowDown size={16} /> نمایش بیشتر</button>}
       </div>}
     </section>
-    <section>
-      <hr />
-      <div>
-        <p>let's see if we actually need to add something in this section of website, maybe the guide of website's usage, download page for android app or about page </p>
-        <p>I think there should be a "see more" or "دیدن بیشتر" in fa-Af, 
-          and then once user clicked "see more", there should be paginated properties and posts
-        </p>
-        <p>
-          also, if user searched or filtered anything, there should not be this section of website included, the avaiable data must get 
-          returned to the user. this section of data must not get included. 
-        </p>
-      </div>
-    </section>
   </>
 }
 

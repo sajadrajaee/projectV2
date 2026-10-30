@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import {
-  BarChart3, Building2, FilePlus2, FileText, KeyRound,
+  BarChart3, Send, Building2, FilePlus2, FileText, KeyRound,
   LayoutDashboard, Mail, Menu, MessageCircle, NotebookPen, UserRound, X
 } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
@@ -62,42 +62,69 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
       </header>
       <main>{children}</main>
       <footer className="site-footer">
-      <div className="footer-inner">
-        <div className="footer-brand">
-          <strong>وبسایت خانه یاب</strong>
-          <span>جستجوی آسان، انتخاب مطمئن</span>
+        <div className="footer-inner">
+
+          {/* Website branding */}
+          <div className="footer-brand">
+            <strong>وبسایت خانه یاب</strong>
+            <span>جستجوی آسان، انتخاب مطمئن</span>
+            <p>
+              خانه، دکان و زمین مورد نظر خود را
+              به آسانی در خانه یاب پیدا کنید.
+            </p>
+          </div>
+
+          {/* Useful links */}
+          <div className="footer-links" aria-label="لینک‌های فوتر">
+
+            <Link to="/about">
+              درباره ما
+            </Link>
+
+            <a
+              href="/khanayab.apk"
+              download="khanayab.apk"
+              className="footer-download-link"
+            >
+              دانلود اپلیکیشن اندروید
+            </a>
+
+            <a href="mailto:khanayabofficial@gmail.com">
+              <Mail size={16} />
+              khanayabofficial@gmail.com
+            </a>
+
+            <a
+              href="https://wa.me/93795974057"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <MessageCircle size={16} />
+              واتساپ
+            </a>
+
+            <a
+              href="https://facebook.com/your-facebook-page"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FacebookIcon size={16} />
+              فیسبوک
+            </a>
+            <a
+              href="https://t.me/khanayab2026"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Send size={16} />
+              کانال تلگرام
+            </a>
+          </div>
+
+          <span className="footer-name">خانه یاب</span>
+
         </div>
-
-        <nav className="footer-links" aria-label="لینک‌های فوتر">
-          <Link to="/about">درباره ما</Link>
-
-          <a href="mailto:khanayabofficial@gmail.com">
-            <Mail size={16} />
-            khanayabofficial@gmail.com
-          </a>
-
-          <a
-            href="https://wa.me/93795974057"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <MessageCircle size={16} />
-            واتساپ
-          </a>
-
-          <a
-            href="https://facebook.com/your-facebook-page"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FacebookIcon size={16} />
-            فیسبوک
-          </a>
-        </nav>
-
-        <span className="footer-name">خانه یاب</span>
-      </div>
-    </footer>
+      </footer>
     </>
   )
 }
