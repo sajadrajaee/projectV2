@@ -2,7 +2,7 @@ import os
 from django.core.exceptions import ValidationError
 
 MAX_IMAGE_SIZE = 5 * 1024 * 1024       # 5 MB
-MAX_VIDEO_SIZE = 30 * 1024 * 1024      # 30 MB
+MAX_VIDEO_SIZE = 50 * 1024 * 1024      # 30 MB
 
 IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".gif", ".webp"]
 VIDEO_EXTENSIONS = [".mp4", ".webm", ".ogg", ".mov"]

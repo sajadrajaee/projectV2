@@ -100,7 +100,6 @@ export function HomePage() {
         <Field label="نوع ملک"><select value={form.property_type} onChange={(event) => setForm({ ...form, property_type: event.target.value })}><option value="">همه</option>{PROPERTY_TYPES.map(([key, name]) => <option key={key} value={key}>{name}</option>)}</select></Field>
         <Field label="ناحیه"><select value={form.district} onChange={(event) => setForm({ ...form, district: event.target.value })}><option value="">همه ناحیه‌ها</option>{DISTRICTS.map(([key, name]) => <option key={key} value={key}>{name}</option>)}</select></Field>
         <Field label="نوع معامله"><select value={form.listing_type} onChange={(event) => setForm({ ...form, listing_type: event.target.value })}><option value="">همه</option>{LISTING_TYPES.map(([key, name]) => <option key={key} value={key}>{name}</option>)}</select></Field>
-        {/* we need to have a search input field here, so user can enter area's name and search for properties through area name */}
         <button type="submit" className="primary-button search-button"><Search size={17} /> جستجو</button>
       </form>
     </section>

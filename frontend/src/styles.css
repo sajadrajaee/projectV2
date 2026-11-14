@@ -922,3 +922,124 @@ body {
     align-self: flex-start;
   }
 }
+
+
+/* <!-- --------------------------this is the property card link --> */
+
+.copy-link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 16px;
+  margin-top: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copy-link-button:hover {
+  background: #f3f4f6;
+  border-color: #aaa;
+}
+
+
+/* -------------------------------- phone and whatsapp number design */
+
+.office-contacts {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid #e8ecf0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex: 1;
+  min-width: 220px;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.contact-card--phone .contact-card__icon {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.contact-card--whatsapp .contact-card__icon {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.contact-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-card__info small {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.contact-card__info strong {
+  font-size: 15px;
+  color: #1f2937;
+  direction: ltr;
+  text-align: right;
+}
+
+.contact-card__action {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.contact-card--phone .contact-card__action {
+  background: #4f46e5;
+  color: #fff;
+}
+
+.contact-card--whatsapp .contact-card__action {
+  background: #059669;
+  color: #fff;
+}
+
+.contact-card--empty {
+  width: 100%;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+  padding: 16px;
+}
