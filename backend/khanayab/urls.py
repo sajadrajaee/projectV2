@@ -36,7 +36,6 @@ urlpatterns = [
     path('api/health/', health_check, name="health_check"),
     path('', include('authentications.urls')),
     path('', include('office.urls')),
-    path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('logo.png'))),
 ]
 
 
